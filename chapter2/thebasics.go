@@ -62,10 +62,40 @@ func add(x int, y int) int {
 	return x + y
 }
 
+func sub(x, y int) int {
+	return x - y
+}
+func getLocation(city string) (string, string) {
+	var region, continent string
+
+	switch city {
+	case "Dhaka", "dhaka":
+		region, continent = "Bangladesh", "Asia"
+	default:
+		region, continent = "Unknown", "Unknown"
+	}
+
+	return region, continent
+}
+func getLongLat(city string) (long, lat int) {
+	switch city {
+	case "Dhaka", "dhaka":
+		long, lat = 1, 2
+	}
+
+	return
+}
 func main() {
 	variable_typing()
 	constants()
 	printing()
 
 	fmt.Println(add(10, 5))
+	fmt.Println(sub(10, 5))
+
+	region, continent := getLocation("Dhaka")
+	fmt.Println(region, continent)
+
+	long, lat := getLongLat("Dhaka")
+	fmt.Println(long, lat)
 }
