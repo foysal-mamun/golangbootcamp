@@ -85,6 +85,20 @@ func getLongLat(city string) (long, lat int) {
 
 	return
 }
+
+type Artist struct {
+	Name, Genre string
+	Songs       int
+}
+
+func (a Artist) newRelease() int {
+	a.Songs++
+	return a.Songs
+}
+func (a *Artist) getRelease() int {
+	a.Songs++
+	return a.Songs
+}
 func main() {
 	variable_typing()
 	constants()
@@ -98,4 +112,11 @@ func main() {
 
 	long, lat := getLongLat("Dhaka")
 	fmt.Println(long, lat)
+
+	me := Artist{Name: "foysal", Genre: "Electro", Songs: 20}
+	fmt.Println(me.Name, me.Genre, me.Songs)
+	me.newRelease()
+	fmt.Println(me.Name, me.Genre, me.Songs)
+	me.getRelease()
+	fmt.Println(me.Name, me.Genre, me.Songs)
 }
