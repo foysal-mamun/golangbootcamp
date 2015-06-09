@@ -39,6 +39,17 @@ func variable_typing() {
 	displayAll()
 }
 
+func constants() {
+	const Pi = 3.14
+	const (
+		StatusOk      = 200
+		StatusCreated = 201
+	)
+
+	fmt.Println(Pi, StatusOk, StatusCreated)
+}
+
 func main() {
 	variable_typing()
+	constants()
 }
