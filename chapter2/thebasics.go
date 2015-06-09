@@ -49,7 +49,17 @@ func constants() {
 	fmt.Println(Pi, StatusOk, StatusCreated)
 }
 
+func printing() {
+	cylonModel := 6
+	fmt.Println(cylonModel)
+
+	name := "Foysal"
+	msg := fmt.Sprintf("Number %d", 6)
+	fmt.Printf("%s is also known as %s\n", name, msg)
+}
+
 func main() {
 	variable_typing()
 	constants()
+	printing()
 }
