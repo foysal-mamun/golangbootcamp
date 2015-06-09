@@ -58,8 +58,14 @@ func printing() {
 	fmt.Printf("%s is also known as %s\n", name, msg)
 }
 
+func add(x int, y int) int {
+	return x + y
+}
+
 func main() {
 	variable_typing()
 	constants()
 	printing()
+
+	fmt.Println(add(10, 5))
 }
